@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "packageRules": [
+    {
+      "paths": ["plugins.txt"],
+      "groupName": "Jenkins plugins",
+      "labels": ["jenkins-plugins"]
+    }
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["^plugins.txt$"],
+      "matchStrings": [
+        "(?<depName>.*?):(?<currentValue>.*?)\\s"
+      ],
+      "lookupNameTemplate": "maximdanilov/{{depName}}",
+      "datasourceTemplate": "docker",
+      "versioningTemplate": "docker"
+    }
+  ]
+}
