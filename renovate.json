@@ -21,5 +21,14 @@
       "datasourceTemplate": "docker",
       "versioningTemplate": "docker"
     }
+  ],
+  "hostRules": [
+    {
+      "domainName": "docker.io",
+      "username": "maximdanilov",
+      "encrypted": {
+        "password": "ONPTdr51tBGUItYuOGbRId3TJgvlimWeEwFgvG9ohlVVrVpHnEzSIDPIAbJYqmmEqiUBVj1isfGeJw/dUTW5jUwgc/4lZcZSe57qtTIncFBNcK28nJloAVJn0pdZe/5FE0GO+QyjxzYly1Y6kVd5ObLbPYEEnbtADYzyrihYTkCaLEvtZzr7n/JIbYV2QqNHYJB2OniZax4WoMgSSqktfmdQhXlboWwN3o9LW1x2dKpEbgdjZ2W1H6N/kf5IvVejmizB7M+Gs171EIdM/kSJjrYcNShWsoDBKQCI7bTe87xybfncsdZWNS6fJgdr1l/dwzeiR7FQnOxW6rsaJMK9yg=="
+      }
+    }
   ]
 }
