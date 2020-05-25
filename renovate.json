@@ -32,8 +32,8 @@
     },
     {
       "domainName": "stage.registry.camunda.cloud",
-      "username": "maxim.danilov",
       "encrypted": {
+        "username": "GzvPDOEx+/MuvkRCuCWgJMiX89z4YEOt4sGkaHU/Yn694zfV2A/vfI+a59tuu8T+XnA9SkE+eyhEW+7c9z2UsttC1Dl8460kcRnIhMqkywLkviPZ2NCUaRmjUaahLkhPU9QkRKWWdjVonezSUp+RMqT3hgIJICTeJt0/brIWvrL07V+VU9rDN3KPRObr1qlklKBlrYaAT5JWEu7FU0eGvjITg/deiAb7NUy7oY8PsOPTkDHvGpqxZ+PVW2xJ7LpJ14HbWXo4nHFeKLs9RZ3YXm6MbKE3L5GfC8jrJqB11/i4XyouRoqziSa1SUYJGUE0cGJSunLd5v+6mt13AysxMA==",
         "password": "E8VgBbQiY2W3Z4n+dy1wSARsnW60uhcbJnZvVCQIpX2P5gbT69ShhV7EnctTvLnHQ0dubQz/JDqWJ5uIqnceFi4/Z8pD/JT/xx3VqfepprNOri2wO/kTdzVCkTlJDONnHwwwXZ9V0kziZwloE+5Ud1iPnOKan8uok6lyZveZ7z7o/jNjDIlGX8Qx33aVksD3HCN044eOPl7dXy2PuXQF9UHf/MntoZGQkZIE7+Ul/nWwFsuI+ASluDqgleTTjlMYufdXoH46RNP2Sf1nwARNQd2empOXHzzsmOf8oG/9s473XHMgOStjKO3t3L/Io1OtVCqxx1W7MaKyE450uHeOdw=="
       }
     }
