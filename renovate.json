@@ -11,6 +11,7 @@
       "commitMessageTopic": "Jenkiins deps"
     }
   ],
+  "reviewers": ["maxdanilov"],
   "regexManagers": [
     {
       "fileMatch": ["^plugins.txt$"],
