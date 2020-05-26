@@ -8,10 +8,15 @@
       "paths": ["plugins.txt"],
       "groupName": "Jenkins plugins",
       "labels": ["jenkins-plugins"],
-      "commitMessageTopic": "Jenkiins deps"
+      "commitMessageTopic": "Jenkiins deps",
+      "reviewers": ["maxdanilov"]
+    },
+    {
+      "languages": ["python"],
+      "packagePatterns": [".*"],
+      "reviewers": ["maxdanilov"]
     }
   ],
-  "reviewers": ["maxdanilov"],
   "regexManagers": [
     {
       "fileMatch": ["^plugins.txt$"],
