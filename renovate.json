@@ -2,6 +2,8 @@
   "extends": [
     "config:base"
   ],
+  "prHourlyLimit": 120,
+  "prConcurrentLimit": 120,
   "masterIssue": true,
   "packageRules": [
     {
