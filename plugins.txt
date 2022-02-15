@@ -1,7 +1,13 @@
 # A plugin that uses semver, it will get "latest" updates.
 # https://plugins.jenkins.io/htmlpublisher/#releases
-htmlpublisher:1.25
+htmlpublisher:1.25  # should --> 1.2.9
 
 # A plugin that uses the new versioning format, it will NOT get "latest" updates.
 # https://plugins.jenkins.io/jackson2-api/#releases
-jackson2-api:2.12.3
+jackson2-api:2.12.3  # should --> 2.13.1-240.vfedd8f46cfde
+
+
+publish-over-ssh:1.2.1  # should --> 1.2.3
+github-api:1.122  # should --> 1.301-378.v9807bd746da5
+
+hashicorp-vault-plugin:3.7.0  # should --> 336.v182c0fbaaeb7
