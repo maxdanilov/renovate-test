@@ -1,13 +1,46 @@
-# A plugin that uses semver, it will get "latest" updates.
-# https://plugins.jenkins.io/htmlpublisher/#releases
-htmlpublisher:1.25  # should --> 1.2.9
 
-# A plugin that uses the new versioning format, it will NOT get "latest" updates.
-# https://plugins.jenkins.io/jackson2-api/#releases
+# Upgrade with the same schema
+
+## a.b -> a.b
+
+htmlpublisher:1.25  # should --> 1.29
+
+## a.b.c -> a.b.c 
+
+jenkins-design-language:1.24.1  # should --> 1.25.2
+
+## a.b.c-d.e -> a.b.c-d.e
+
+apache-httpcomponents-client-4-api:3.2.11-1.0  # should --> 4.5.13-1.0
+handy-uri-templates-2-api:2.1.6-1.0  # should --> 2.1.8-1.0
+
+## a.b.c-d -> a.b.c-d
+
+echarts-api:4.2.0-2  # should --> 5.2.1-2
+
+## N.vH -> N.vH 
+
+durable-task:320.v095aecbb0ef2  # should --> 493.v195aefbb0ff2
+
+## a.b.c-N.vH -> a.b.c-N.vH
+
+kubernetes-client-api:4.2.1-121.v0a0000fb8c20  # should --> 5.10.1-171.vaa0774fb8c20
+
+# Upgrade with changes of schema
+
+## a.b.c -> a.b.c-N.vH
 jackson2-api:2.12.3  # should --> 2.13.1-240.vfedd8f46cfde
 
-
-publish-over-ssh:1.2.1  # should --> 1.2.3
+## a.b -> a.b-N.vH
 github-api:1.122  # should --> 1.301-378.v9807bd746da5
 
+## a.b.c -> N.vH
 hashicorp-vault-plugin:3.7.0  # should --> 336.v182c0fbaaeb7
+
+## a.b -> a.b.c
+
+postbuildscript:2.14   # should -> 2.15.2
+
+## a.b.c -> a.b
+
+cron_column:1.1.1  # should -> 1.4
