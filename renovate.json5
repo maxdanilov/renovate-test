@@ -1,0 +1,44 @@
+{
+  extends: [
+    "config:base",
+    "docker:enableMajor"
+  ],
+  automerge: false,
+  schedule: ["on the 1st and 3rd day instance on sunday after 9pm"],
+  prHourlyLimit: 6,
+  prConcurrentLimit: 50,
+  commitBodyTable: true,
+  semanticCommits: true,
+  separateMajorMinor: false,
+  labels: ["dependency-upgrade"],
+  reviewers: ["team:infra-maintenance-dri"],
+  lazyGrouping: false,
+  masterIssue: true,
+  prBodyNotes: [
+    "{{#if isMajor}}:warning: THIS IS A MAJOR VERSION UPDATE :warning:{{/if}}",
+    "Before merging, *always* check with the release notes if any other changes need to be done."
+  ],
+  docker: {
+    pruneStaleBranches: false
+  },
+  major: {
+    enabled: true
+  },
+  minor: {
+    enabled: true
+  },
+  patch: {
+    enabled: true
+  },
+  jenkins: {
+    fileMatch: ["(^|/)plugins\.txt", "(^|/)plugins_extra\.txt"],
+  },
+  packageRules: [
+    {
+      datasources: ["jenkins-plugins"],
+      packagePatterns: [".*"],
+      groupName: "Jenkins plugins",
+      versioning: "maven",
+    },
+  ],
+}

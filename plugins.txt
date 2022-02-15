@@ -1,1 +1,7 @@
-test_image_private:1.3.1
+# A plugin that uses semver, it will get "latest" updates.
+# https://plugins.jenkins.io/htmlpublisher/#releases
+htmlpublisher:1.25
+
+# A plugin that uses the new versioning format, it will NOT get "latest" updates.
+# https://plugins.jenkins.io/jackson2-api/#releases
+jackson2-api:2.12.3
