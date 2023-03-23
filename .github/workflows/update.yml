@@ -9,8 +9,8 @@ on:
     - '**/update.sh'
 
 jobs:
-  format-code:
-    runs-on: ubuntu-latest
+  update-steps:
+    runs-on: ubuntu-22.04
 
     permissions:
       contents: write  # give GITHUB_TOKEN permission to commit changes
