@@ -1,5 +1,5 @@
 ---
-name: Run Update
+name: Update Scripts
 
 on:
   push:
