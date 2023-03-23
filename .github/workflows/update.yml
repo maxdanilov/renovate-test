@@ -5,15 +5,15 @@ on:
   push:
     branches:
     - 'renovate/*'
+    paths:
+    - '**/update.sh'
 
 jobs:
   format-code:
     runs-on: ubuntu-latest
 
     permissions:
-      # Give the default GITHUB_TOKEN write permission to commit and push the
-      # added or changed files to the repository.
-      contents: write
+      contents: write  # give GITHUB_TOKEN permission to commit changes
 
     steps:
     - uses: actions/checkout@v3
