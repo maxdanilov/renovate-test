@@ -20,8 +20,10 @@ jobs:
     - uses: asdf-vm/actions/setup@v2
     - name: Install Helm
       run: |
-        asdf plugin add helm
-        asdf install helm
+        for tool in helm velero; do
+          asdf plugin add "${tool}"
+          asdf install "${tool}"
+        done
     - id: files
       name: Get changed maintenance files
       uses: Ana06/get-changed-files@v2.2.0
