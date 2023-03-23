@@ -20,7 +20,7 @@ jobs:
     - id: files
       name: Get changed maintenance files
       uses: jitterbit/get-changed-files@v1
-    - name Run maintenance scripts
+    - name: Run maintenance scripts
       run: |
         for changed_file in ${{ steps.files.outputs.all }}; do
           if [[ ${changed_file} == *"update.sh"* ]]; then
@@ -32,9 +32,7 @@ jobs:
       continue-on-error: true
       with:
         extra_args: --all-files --verbose
-    # Commit all changed files back to the repository
     - uses: stefanzweifel/git-auto-commit-action@v4
-      # if: always()  # run even if pre-commit hook made fixes
-      with:
+      with:  # overwrite commit author so Renovate does not stop keeping the branch up-to-date
         commit_author: "renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>"
         commit_message: "chore(deps): Running upgrade scripts"
