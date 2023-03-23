@@ -22,7 +22,8 @@ jobs:
       uses: Ana06/get-changed-files@v2.2.0
     - name: Run maintenance scripts
       run: |
-        echo ${{ steps.files.outputs.all }} |  while IFS= read -r changed_file; do
+        changed_files="${{ steps.files.outputs.all }}"
+        echo $changed_files | xargs -n1 echo | while IFS=' ' read -r changed_file; do
           if [[ "${changed_file}" == *"update.sh"* ]]; then
             echo "Running update script ${changed_file}"
             bash "${changed_file}"
