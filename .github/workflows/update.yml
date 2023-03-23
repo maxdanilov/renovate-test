@@ -22,10 +22,10 @@ jobs:
       uses: Ana06/get-changed-files@v2.2.0
     - name: Run maintenance scripts
       run: |
-        for changed_file in ${{ steps.files.outputs.all }}; do
-          if [[ ${changed_file} == *"update.sh"* ]]; then
+        echo ${{ steps.files.outputs.all }} |  while IFS= read -r changed_file; do
+          if [[ "${changed_file}" == *"update.sh"* ]]; then
             echo "Running update script ${changed_file}"
-            bash ${changed_file}
+            bash "${changed_file}"
           fi
         done
     - uses: pre-commit/action@v3.0.0
