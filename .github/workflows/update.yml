@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: asdf-vm/actions/setup@v2
-    - name: Install Helm
+    - name: Install tools
       run: |
         for tool in helm velero; do
           asdf plugin add "${tool}"
