@@ -17,9 +17,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Run maintenance
+    - id: files
+      name: Get changed maintenance files
+      uses: jitterbit/get-changed-files@v1
+    - name Run maintenance scripts
       run: |
-        ./app1/update.sh
+        for changed_file in ${{ steps.files.outputs.all }}; do
+          if [[ ${changed_file} == *"update.sh"* ]]; then
+            echo "Running update script ${changed_file}"
+            bash ${changed_file}
+          fi
+        done
     - uses: pre-commit/action@v3.0.0
       continue-on-error: true
       with:
