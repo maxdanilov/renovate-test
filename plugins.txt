@@ -5,7 +5,7 @@
 
 htmlpublisher:1.25  # should --> 1.29
 
-## a.b.c -> a.b.c 
+## a.b.c -> a.b.c
 
 jenkins-design-language:1.24.1  # should --> 1.25.2
 
@@ -18,7 +18,7 @@ handy-uri-templates-2-api:2.1.6-1.0  # should --> 2.1.8-1.0
 
 echarts-api:4.2.0-2  # should --> 5.2.1-2
 
-## N.vH -> N.vH 
+## N.vH -> N.vH
 
 durable-task:320.v095aecbb0ef2  # should --> 493.v195aefbb0ff2
 

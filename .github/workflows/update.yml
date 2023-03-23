@@ -1,9 +1,10 @@
+---
 name: Run Update
 
-on: 
+on:
   push:
     branches:
-      - 'renovate/*'
+    - 'renovate/*'
 
 jobs:
   format-code:
@@ -15,15 +16,16 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: pre-commit/action@v3.0.0
-        with:
-          extra_args: --all-files --verbose
-      - name: Run maintenance
-        run: |
-          ./app1/update.sh
-      # Commit all changed files back to the repository
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_author: "renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>"
-          commit_message: "chore(deps): Running upgrade scripts"
+    - uses: actions/checkout@v3
+    - name: Run maintenance
+      run: |
+        ./app1/update.sh
+    - uses: pre-commit/action@v3.0.0
+      with:
+        extra_args: --all-files --verbose
+    # Commit all changed files back to the repository
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      if: always()  # run even if pre-commit hook made fixes
+      with:
+        commit_author: "renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>"
+        commit_message: "chore(deps): Running upgrade scripts"
