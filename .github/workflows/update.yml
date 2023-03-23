@@ -21,5 +21,6 @@ jobs:
           ./app1/update.sh
       # Commit all changed files back to the repository
       - uses: stefanzweifel/git-auto-commit-action@v4
-        commit_author: "renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>"
-        commit_message: "chore(deps): Running upgrade scripts"
+        with:
+          commit_author: "renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>"
+          commit_message: "chore(deps): Running upgrade scripts"
