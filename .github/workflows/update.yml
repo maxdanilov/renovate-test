@@ -16,6 +16,11 @@ jobs:
       contents: write  # give GITHUB_TOKEN permission to commit changes
 
     steps:
+    - uses: asdf-vm/actions/setup@v2
+    - name: Install Helm
+      run: |
+        asdf plugin add helm
+        asdf install helm
     - uses: actions/checkout@v3
     - id: files
       name: Get changed maintenance files
