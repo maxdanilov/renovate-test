@@ -27,7 +27,9 @@ jobs:
         echo $changed_files | xargs -n1 echo | while IFS=' ' read -r changed_file; do
           if [[ "${changed_file}" == *"update.sh"* ]]; then
             tools="$(< "${changed_file}" grep "# asdf-tools-used=" | cut -d= -f2)"
+            echo "Discovered asdf tools for ${changed_file}: ${tools}"
             echo "$tools" | xargs -n1 echo | while IFS=' ' read -r tool; do
+              echo "Installing asdf tool ${tool}"
               asdf plugin add "${tool}"
               asdf install "${tool}"
             done
