@@ -29,7 +29,7 @@ jobs:
             tools="$(< "${changed_file}" grep "# asdf-tools-used=" | cut -d= -f2)"
             echo "Discovered asdf tools for ${changed_file}: ${tools}"
             echo "$tools" | xargs -n1 echo | while IFS=' ' read -r tool; do
-              if [[ -n $"tool" ]]; then
+              if [[ -n "${tool//[[:blank:]]/}" ]]; then
                 echo "Installing asdf tool ${tool}"
                 asdf plugin add "${tool}"
                 asdf install "${tool}"
