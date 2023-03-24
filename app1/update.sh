@@ -1,6 +1,8 @@
 #!/bin/bash
 set -ex
 
+# asdf-tools-used=
+
 # renovate: datasource=github-tags depName=cert-manager/cert-manager
 VERSION=v1.10.1
 
