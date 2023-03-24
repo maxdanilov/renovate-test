@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 
-# asdf-tools-used=
+# asdf-tools-used=helm velero
 
 # renovate: datasource=github-tags depName=cert-manager/cert-manager
 VERSION=v1.10.1
