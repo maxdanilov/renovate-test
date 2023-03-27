@@ -20,10 +20,10 @@ jobs:
     - uses: asdf-vm/actions/setup@v2
     - id: files
       name: Get changed files
-      uses: Ana06/get-changed-files@v2.2.0
+      uses: tj-actions/changed-files@v35
     - name: Run maintenance scripts
       run: |
-        changed_files="${{ steps.files.outputs.modified }}"
+        changed_files="${{ steps.files.outputs.modified_files }}"
         echo $changed_files | xargs -n1 echo | while IFS=' ' read -r changed_file; do
           if [[ "${changed_file}" == *"update.sh"* ]]; then
             tools="$(< "${changed_file}" grep "# asdf-tools-used=" | cut -d= -f2)"
