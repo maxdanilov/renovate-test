@@ -47,7 +47,7 @@ jobs:
       continue-on-error: true  # in case the pre-commit hooks change formatting, exit code is 1 (expected)
       with:
         extra_args: end-of-file-fixer --all-files --verbose
-    - uses: stefanzweifel/git-auto-commit-action@v4
+    - uses: stefanzweifel/git-auto-commit-action@v5
       with:  # overwrite commit author so Renovate does not stop keeping the branch up-to-date
         commit_author: "renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>"
         commit_message: "chore(deps): Running upgrade scripts"
