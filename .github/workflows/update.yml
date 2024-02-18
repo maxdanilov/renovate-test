@@ -39,11 +39,11 @@ jobs:
             bash "${changed_file}"
           fi
         done
-    - uses: pre-commit/action@v3.0.0
+    - uses: pre-commit/action@v3.0.1
       continue-on-error: true  # in case the pre-commit hooks change formatting, exit code is 1 (expected)
       with:
         extra_args: trailing-whitespace --all-files --verbose
-    - uses: pre-commit/action@v3.0.0
+    - uses: pre-commit/action@v3.0.1
       continue-on-error: true  # in case the pre-commit hooks change formatting, exit code is 1 (expected)
       with:
         extra_args: end-of-file-fixer --all-files --verbose
