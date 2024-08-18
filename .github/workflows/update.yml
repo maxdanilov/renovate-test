@@ -20,7 +20,7 @@ jobs:
     - uses: asdf-vm/actions/setup@v2
     - id: files
       name: Get changed files
-      uses: tj-actions/changed-files@v35
+      uses: tj-actions/changed-files@v44
     - name: Run maintenance scripts
       run: |
         changed_files="${{ steps.files.outputs.modified_files }}"
