@@ -1,0 +1,30 @@
+name: "C8Run: build/test"
+
+on:
+  push:
+    paths:
+      - "c8run/**"
+      - ".github/workflows/test.yaml"
+
+jobs:
+  test_c8run:
+    strategy:
+      matrix:
+        # macos-latest is ARM, mac os 13 will execute on x86 runner.
+        os: [ubuntu-latest, macos-latest, macos-13]
+    name: C8Run Test ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - name: print architecture
+        run: arch
+
+  test_c8run_windows:
+    name: C8Run Test Windows
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+    - uses: actions/checkout@v4
