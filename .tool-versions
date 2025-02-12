@@ -1,4 +1,4 @@
 actionlint 1.6.23
-helm 3.11.2
+helm 3.17.1
 shellcheck 0.9.0
 velero v1.10.2
