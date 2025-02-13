@@ -4,7 +4,7 @@ set -ex
 # asdf-tools-used=helm velero
 
 # renovate: datasource=github-tags depName=cert-manager/cert-manager
-VERSION=v1.10.1
+VERSION=v1.17.1
 
 SCRIPT_PATH="$(dirname "$(realpath "$0")")"
 UPSTREAM_SOURCE="https://github.com/jetstack/cert-manager/releases/download/${VERSION}/cert-manager.yaml"
